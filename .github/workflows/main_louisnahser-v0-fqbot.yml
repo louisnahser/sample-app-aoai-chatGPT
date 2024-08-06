@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'louisnahser-v0-FQbot'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4FE7DBE0C8EB4DACA8A4E7EB1785471B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E9009D50410E41B0BF9910F5476F4E78 }}
