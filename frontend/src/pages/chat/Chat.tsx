@@ -949,8 +949,9 @@ const Chat = () => {
                 className={styles.citationPanelTitle}
                 tabIndex={0}
                 title={
-                  activeCitation.url
-                }
+  activeCitation.url ? String(activeCitation.url) : ''
+}
+
                 onClick={() => onViewSource(activeCitation)}>
                 {activeCitation.title}
               </h5>
