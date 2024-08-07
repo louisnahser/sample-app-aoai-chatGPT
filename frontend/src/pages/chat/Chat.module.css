@@ -58,7 +58,7 @@
   align-items: flex-end;
   text-align: center;
   letter-spacing: -0.01em;
-  color: #616161;
+  color: #000000;
 }
 
 .chatIcon {
@@ -96,7 +96,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
-  color: #242424;
+  color: #000000;
   order: 0;
   flex-grow: 0;
   white-space: pre-wrap;
@@ -116,7 +116,7 @@
   box-shadow:
     rgba(182, 52, 67, 1) 1px 1px 2px,
     rgba(182, 52, 67, 1) 0px 0px 1px;
-  color: #242424;
+  color: #000000;
   flex: none;
   order: 0;
   flex-grow: 0;
