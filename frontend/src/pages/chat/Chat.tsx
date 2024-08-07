@@ -696,10 +696,10 @@ const Chat = () => {
   }
 
   const onViewSource = (citation: Citation) => {
-    if (citation.url) {
-      window.open('https://www.lanxess.com', '_blank');
+        if (citation.url && !citation.url.includes("blob.core")) {
+            window.open(citation.url, "_blank");
+        }
     }
-}
 
 
   const parseCitationFromMessage = (message: ChatMessage) => {
@@ -948,14 +948,11 @@ const Chat = () => {
                 />
               </Stack>
               <h5
-                className={styles.citationPanelTitle}
-                tabIndex={0}
-                title={
-  activeCitation.url ? String(activeCitation.url) : ''
-}
-
-                onClick={() => onViewSource(activeCitation)}>
-                {activeCitation.title}
+                className={styles.citationPanelTitle} 
+        tabIndex={0} 
+        title={activeCitation.url && !activeCitation.url.includes("blob.core") ? activeCitation.url : activeCitation.title ?? ""} 
+        onClick={() => onViewSource(activeCitation)}
+    >{activeCitation.title}
               </h5>
               <div tabIndex={0}>
                 <ReactMarkdown
