@@ -695,7 +695,7 @@ const Chat = () => {
   }
 
   const onViewSource = (citation: Citation) => {
-    if (citation.url && !citation.url.includes('blob.core')) {
+    if (citation.url) {
       window.open(citation.url, '_blank')
     }
   }
@@ -949,9 +949,7 @@ const Chat = () => {
                 className={styles.citationPanelTitle}
                 tabIndex={0}
                 title={
-                  activeCitation.url && !activeCitation.url.includes('blob.core')
-                    ? activeCitation.url
-                    : activeCitation.title ?? ''
+                  activeCitation.url
                 }
                 onClick={() => onViewSource(activeCitation)}>
                 {activeCitation.title}
