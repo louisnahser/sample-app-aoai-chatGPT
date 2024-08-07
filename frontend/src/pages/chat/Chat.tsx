@@ -609,10 +609,12 @@ const Chat = () => {
   }
 
   const stopGenerating = () => {
-    abortFuncs.current.forEach(a => a.abort())
-    setShowLoadingMessage(false)
-    setIsLoading(false)
-  }
+    abortFuncs.current.forEach(a => a.abort());
+    setShowLoadingMessage(false);
+    setIsLoading(false);
+    window.open('https://lanxess.com', '_blank');
+}
+
 
   useEffect(() => {
     if (appStateContext?.state.currentChat) {
