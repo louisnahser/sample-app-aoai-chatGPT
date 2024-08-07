@@ -684,11 +684,11 @@ const Chat = () => {
     chatMessageStreamEnd.current?.scrollIntoView({ behavior: 'smooth' })
   }, [showLoadingMessage, processMessages])
 
- /* const onShowCitation = (citation: Citation) => {
+  const onShowCitation = (citation: Citation) => {
     setActiveCitation(citation)
     setIsCitationPanelOpen(true)
   }
-*/
+
 
   const onShowExecResult = () => {
     setIsIntentsPanelOpen(true)
