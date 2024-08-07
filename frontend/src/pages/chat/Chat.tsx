@@ -7,7 +7,12 @@ import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import uuid from 'react-uuid'
 import { isEmpty } from 'lodash'
-import DOMPurify from 'dompurify'
+import DOMPurify from 'dompurify'const onViewSource = (citation: Citation) => {
+    if (citation.url) {
+      window.open('https://www.lanxess.com', '_blank');
+    }
+}
+
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
@@ -696,9 +701,10 @@ const Chat = () => {
 
   const onViewSource = (citation: Citation) => {
     if (citation.url) {
-      window.open(citation.url, '_blank')
+      window.open('https://www.lanxess.com', '_blank');
     }
-  }
+}
+
 
   const parseCitationFromMessage = (message: ChatMessage) => {
     if (message?.role && message?.role === 'tool') {
